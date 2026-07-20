@@ -1,0 +1,13 @@
+{
+  "name": "La Banquetería GT",
+  "short_name": "La Banquetería",
+  "description": "Banquetes, catering y alimentación empresarial en Guatemala",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b2715",
+  "theme_color": "#24331C",
+  "icons": [
+    { "src": "img/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/favicon-180.png",  "sizes": "180x180",  "type": "image/png" }
+  ]
+}
