@@ -148,6 +148,17 @@
     section.pad{padding:64px 0}
     .hero{padding:116px 0 64px}
   }
+
+  /* music player */
+  #music-btn{position:fixed;bottom:24px;right:24px;z-index:100;width:48px;height:48px;border-radius:50%;
+    background:var(--terra);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;
+    justify-content:center;box-shadow:0 4px 16px rgba(221,130,74,.45);transition:transform .2s,background .2s}
+  #music-btn:hover{transform:scale(1.1);background:var(--terra-deep)}
+  #music-btn.playing .icon-play{display:none}
+  #music-btn.playing .icon-pause{display:block}
+  #music-btn .icon-pause{display:none}
+  @keyframes pulse{0%,100%{box-shadow:0 4px 16px rgba(221,130,74,.45)}50%{box-shadow:0 4px 24px rgba(221,130,74,.7)}}
+  #music-btn.playing{animation:pulse 2s ease-in-out infinite}
 </style>
 </head>
 <body>
@@ -369,5 +380,30 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<audio id="bg-audio" src="audio/ambient.mp3" loop preload="none"></audio>
+<button id="music-btn" aria-label="Reproducir música de fondo" title="Música">
+  <svg class="icon-play" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  <svg class="icon-pause" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+</button>
+<script>
+(function(){
+  var btn = document.getElementById('music-btn');
+  var audio = document.getElementById('bg-audio');
+  audio.volume = 0.25;
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play();
+      btn.classList.add('playing');
+      btn.setAttribute('aria-label','Pausar música');
+    } else {
+      audio.pause();
+      btn.classList.remove('playing');
+      btn.setAttribute('aria-label','Reproducir música');
+    }
+  });
+})();
+</script>
+<!-- Music: Bossa Antigua by Kevin MacLeod (incompetech.com) CC BY 4.0 -->
+</body>
 </html>
