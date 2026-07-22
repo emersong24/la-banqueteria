@@ -222,6 +222,15 @@
   #music-btn .icon-pause{display:none}
   @keyframes pulse{0%,100%{box-shadow:0 4px 16px rgba(221,130,74,.45)}50%{box-shadow:0 4px 24px rgba(221,130,74,.7)}}
   #music-btn.playing{animation:pulse 2s ease-in-out infinite}
+
+  .card-cta{display:inline-flex;align-items:center;gap:.5em;margin-top:22px;padding:.65em 1.3em;
+    border-radius:999px;font-weight:600;font-size:.88rem;cursor:pointer;text-decoration:none;
+    transition:transform .15s ease,box-shadow .15s ease}
+  .card-cta:hover{transform:translateY(-2px)}
+  .card-cta-event{background:var(--terra);color:#fff;box-shadow:0 4px 14px rgba(221,130,74,.35)}
+  .card-cta-event:hover{background:var(--terra-deep);box-shadow:0 6px 20px rgba(221,130,74,.45)}
+  .card-cta-biz{background:var(--green);color:var(--cream);box-shadow:0 4px 14px rgba(36,51,28,.25)}
+  .card-cta-biz:hover{background:#1b2715;box-shadow:0 6px 20px rgba(36,51,28,.35)}
 </style>
 </head>
 <body>
@@ -279,12 +288,20 @@
         <h3>Banquetes &amp; Catering</h3>
         <p>Hospitalidad de nivel hotelero para tus momentos más importantes, del primer testing al último plato.</p>
         <ul><li>Bodas</li><li>Quinceañeras</li><li>Graduaciones</li><li>Baby showers</li><li>Eventos corporativos</li></ul>
+        <a href="https://wa.me/50254137767?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20mi%20evento%20con%20La%20Banqueter%C3%ADa." target="_blank" rel="noopener" class="card-cta card-cta-event">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+          Agendar mi evento
+        </a>
       </div>
       <div class="card">
         <span class="tag">Empresas</span>
         <h3>Cafeterías &amp; Alimentación Empresarial</h3>
         <p>Servicio de alimentación para empresas y multinacionales: calidad constante, inocuidad garantizada y precio estable durante todo el contrato.</p>
         <ul><li>Cafeterías internas</li><li>Cocina en vivo</li><li>Contratos anuales</li><li>Pruebas de laboratorio</li></ul>
+        <a href="https://wa.me/50254137767?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20para%20alimentaci%C3%B3n%20empresarial." target="_blank" rel="noopener" class="card-cta card-cta-biz">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Solicitar cotización
+        </a>
       </div>
     </div>
   </div>
@@ -294,8 +311,8 @@
 <section class="pad why" id="nosotros">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow">Por qué La Banquetería</div>
-      <h2>Nunca decimos que no</h2>
+      <div class="eyebrow">¿Por qué La Banquetería?</div>
+      <h2>Nunca decimos que no.</h2>
     </div>
     <div class="why-grid">
       <div class="why-item">
